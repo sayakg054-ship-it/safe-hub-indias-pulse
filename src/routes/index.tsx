@@ -1,19 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { CitySelector } from "@/components/CitySelector";
+import { Dashboard } from "@/components/Dashboard";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "SafeHub — Health & Safety Alerts for Indian Cities" },
+      { name: "description", content: "Stay informed about dengue outbreaks, air quality, water safety, and health hazards in your city across India." },
+      { property: "og:title", content: "SafeHub — Health & Safety Alerts" },
+      { property: "og:description", content: "Real-time health alerts, daily quizzes, and AI-powered safety guidance for Indian cities." },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  const [city, setCity] = useState<string | null>(null);
+
+  if (city) {
+    return <Dashboard city={city} onBack={() => setCity(null)} />;
+  }
+
+  return <CitySelector onSelectCity={setCity} />;
 }
