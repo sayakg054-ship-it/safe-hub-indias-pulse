@@ -34,11 +34,15 @@ export const Route = createRootRoute({
       { title: "SafeHub — Health & Safety Awareness" },
       { name: "description", content: "Real-time health alerts, air quality, disease outbreaks for Indian cities." },
       { name: "author", content: "SafeHub" },
-      { property: "og:title", content: "SafeHub" },
-      { property: "og:description", content: "Health & safety awareness for Indian cities." },
+      { property: "og:title", content: "SafeHub — Health & Safety Awareness" },
+      { property: "og:description", content: "Real-time health alerts, air quality, disease outbreaks for Indian cities." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "SafeHub — Health & Safety Awareness" },
+      { name: "twitter:description", content: "Real-time health alerts, air quality, disease outbreaks for Indian cities." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/ede8f877-5da3-4b55-8b7c-dedb8490480d" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/ede8f877-5da3-4b55-8b7c-dedb8490480d" },
     ],
     links: [
       {
