@@ -1,23 +1,210 @@
+// Comprehensive list of Indian cities - all states, UTs, districts
 export const indianCities = [
-  "Mumbai", "Delhi", "Bangalore", "Hyderabad", "Ahmedabad", "Chennai",
-  "Kolkata", "Pune", "Jaipur", "Lucknow", "Kanpur", "Nagpur", "Indore",
-  "Thane", "Bhopal", "Visakhapatnam", "Patna", "Vadodara", "Ghaziabad",
-  "Ludhiana", "Agra", "Nashik", "Faridabad", "Meerut", "Rajkot",
-  "Varanasi", "Srinagar", "Aurangabad", "Dhanbad", "Amritsar",
-  "Allahabad", "Ranchi", "Howrah", "Coimbatore", "Jabalpur", "Gwalior",
-  "Vijayawada", "Jodhpur", "Madurai", "Raipur", "Kota", "Chandigarh",
-  "Guwahati", "Solapur", "Hubli", "Mysore", "Tiruchirappalli", "Bareilly",
-  "Aligarh", "Tiruppur", "Moradabad", "Jalandhar", "Bhubaneswar",
-  "Salem", "Warangal", "Guntur", "Bhiwandi", "Saharanpur", "Gorakhpur",
-  "Bikaner", "Amravati", "Noida", "Jamshedpur", "Bhilai", "Cuttack",
-  "Firozabad", "Kochi", "Nellore", "Bhavnagar", "Dehradun", "Durgapur",
-  "Asansol", "Rourkela", "Nanded", "Kolhapur", "Ajmer", "Akola",
-  "Gulbarga", "Jamnagar", "Ujjain", "Loni", "Siliguri", "Jhansi",
-  "Ulhasnagar", "Jammu", "Sangli", "Mangalore", "Erode", "Belgaum",
-  "Kurnool", "Ambattur", "Rajahmundry", "Tirunelveli", "Malegaon",
-  "Gaya", "Udaipur", "Kakinada", "Davanagere", "Kozhikode", "Shimla",
-  "Gangtok", "Imphal", "Aizawl", "Itanagar", "Shillong", "Kohima",
-  "Agartala", "Port Blair", "Panaji", "Puducherry", "Daman", "Silvassa"
+  // Andhra Pradesh
+  "Visakhapatnam","Vijayawada","Guntur","Nellore","Kurnool","Rajahmundry","Kakinada",
+  "Tirupati","Kadapa","Anantapur","Eluru","Ongole","Srikakulam","Vizianagaram",
+  "Tenali","Proddatur","Chittoor","Hindupur","Machilipatnam","Bhimavaram","Gudivada",
+  "Adoni","Narasaraopet","Tadipatri","Madanapalle","Chirala","Dharmavaram","Gudur",
+  "Markapur","Chilakaluripet","Mangalagiri","Tadepalligudem","Amalapuram","Bapatla",
+  "Pithapuram","Palasa","Rajam","Bobbili","Kavali","Nandyal",
+
+  // Arunachal Pradesh
+  "Itanagar","Naharlagun","Pasighat","Tawang","Ziro","Bomdila","Along","Tezu",
+  "Roing","Changlang","Khonsa","Yingkiong","Daporijo","Seppa","Koloriang",
+
+  // Assam
+  "Guwahati","Silchar","Dibrugarh","Jorhat","Nagaon","Tinsukia","Tezpur","Bongaigaon",
+  "Dhubri","North Lakhimpur","Karimganj","Sivasagar","Goalpara","Barpeta","Mangaldoi",
+  "Diphu","Golaghat","Hailakandi","Nalbari","Kokrajhar","Lanka","Morigaon","Haflong",
+  "Hamren","Hojai","Majuli","Biswanath Chariali",
+
+  // Bihar
+  "Patna","Gaya","Bhagalpur","Muzaffarpur","Purnia","Darbhanga","Bihar Sharif",
+  "Arrah","Begusarai","Katihar","Munger","Chhapra","Danapur","Saharsa","Sasaram",
+  "Hajipur","Dehri","Siwan","Motihari","Nawada","Bagaha","Buxar","Kishanganj",
+  "Sitamarhi","Jamalpur","Jehanabad","Aurangabad Bihar","Lakhisarai","Madhubani",
+  "Samastipur","Sheikhpura","Supaul","Gopalganj","Jamui","Khagaria","Banka",
+  "Madhepura","Araria","Bettiah","Forbesganj",
+
+  // Chhattisgarh
+  "Raipur","Bhilai","Bilaspur","Korba","Durg","Rajnandgaon","Raigarh","Jagdalpur",
+  "Ambikapur","Mahasamund","Dhamtari","Chirmiri","Kanker","Kawardha","Kondagaon",
+  "Mungeli","Balod","Bemetara","Janjgir","Sakti","Manendragarh","Surajpur",
+  "Balrampur Chhattisgarh","Sukma","Bijapur Chhattisgarh","Narayanpur","Gariaband",
+
+  // Goa
+  "Panaji","Margao","Vasco da Gama","Mapusa","Ponda","Bicholim","Curchorem",
+  "Sanquelim","Canacona","Quepem","Sanguem","Pernem","Valpoi",
+
+  // Gujarat
+  "Ahmedabad","Surat","Vadodara","Rajkot","Bhavnagar","Jamnagar","Junagadh",
+  "Gandhinagar","Gandhidham","Nadiad","Anand","Morbi","Mehsana","Bharuch","Vapi",
+  "Navsari","Veraval","Porbandar","Godhra","Bhuj","Palanpur","Valsad","Patan",
+  "Deesa","Amreli","Botad","Dahod","Surendranagar","Modasa","Dholka","Jetpur",
+  "Kalol","Khambhat","Gondal","Umreth","Mandvi","Tapi","Dang","Chhota Udepur",
+  "Kheda","Lunawada","Narmada","Devbhoomi Dwarka","Gir Somnath","Aravalli",
+  "Mahisagar","Sabarkantha","Banaskantha",
+
+  // Haryana
+  "Faridabad","Gurgaon","Panipat","Ambala","Yamunanagar","Rohtak","Hisar","Karnal",
+  "Sonipat","Panchkula","Bhiwani","Sirsa","Bahadurgarh","Jind","Thanesar","Kaithal",
+  "Rewari","Palwal","Hansi","Narnaul","Fatehabad","Hodal","Tohana","Ratia","Sohna",
+  "Charkhi Dadri","Nuh","Mahendragarh",
+
+  // Himachal Pradesh
+  "Shimla","Dharamshala","Solan","Mandi","Palampur","Baddi","Nahan","Hamirpur HP",
+  "Una","Bilaspur HP","Kullu","Chamba","Kangra","Manali","Keylong","Reckong Peo",
+  "Rampur Bushahr","Sundernagar","Nurpur","Paonta Sahib","Dalhousie",
+
+  // Jharkhand
+  "Ranchi","Jamshedpur","Dhanbad","Bokaro","Deoghar","Hazaribagh","Giridih","Ramgarh",
+  "Phusro","Medininagar","Chaibasa","Dumka","Chatra","Latehar","Gumla","Lohardaga",
+  "Pakur","Koderma","Khunti","Simdega","Sahebganj","Jamtara","Godda","Seraikela",
+  "East Singhbhum","West Singhbhum","Palamu",
+
+  // Karnataka
+  "Bangalore","Mysore","Hubli","Mangalore","Belgaum","Gulbarga","Davanagere",
+  "Bellary","Shimoga","Tumkur","Raichur","Bijapur Karnataka","Hospet","Udupi",
+  "Chitradurga","Robertson Pet","Hassan","Gadag","Mandya","Chikmagalur","Gangavathi",
+  "Bagalkot","Ranebennur","Bidar","Karwar","Kolar","Ramanagara","Haveri","Yadgir",
+  "Kodagu","Chamarajanagar","Koppal","Dharwad","Chikkaballapur","Vijayapura",
+
+  // Kerala
+  "Thiruvananthapuram","Kochi","Kozhikode","Thrissur","Kollam","Palakkad","Alappuzha",
+  "Kannur","Kottayam","Malappuram","Thalassery","Manjeri","Vatakara","Payyanur",
+  "Kayamkulam","Punalur","Tirur","Perinthalmanna","Kasaragod","Idukki","Wayanad",
+  "Pathanamthitta","Ernakulam","Ponnani","Guruvayur","Changanassery","Attingal",
+  "Nedumangad","Mavelikkara",
+
+  // Madhya Pradesh
+  "Bhopal","Indore","Jabalpur","Gwalior","Ujjain","Sagar","Dewas","Satna","Ratlam",
+  "Rewa","Murwara","Singrauli","Burhanpur","Khandwa","Bhind","Chhindwara","Guna",
+  "Shivpuri","Vidisha","Chhatarpur","Damoh","Mandsaur","Khargone","Neemuch",
+  "Pithampur","Hoshangabad","Itarsi","Sehore","Betul","Seoni","Datia","Nagda",
+  "Dhar","Tikamgarh","Shahdol","Mandla","Balaghat","Panna","Umaria","Anuppur",
+  "Alirajpur","Jhabua","Barwani","Ashoknagar","Agar Malwa","Niwari","Maihar",
+  "Shajapur","Rajgarh",
+
+  // Maharashtra
+  "Mumbai","Pune","Nagpur","Thane","Nashik","Aurangabad","Solapur","Kolhapur",
+  "Amravati","Nanded","Sangli","Malegaon","Jalgaon","Akola","Latur","Ahmednagar",
+  "Dhule","Ichalkaranji","Chandrapur","Parbhani","Jalna","Bhiwandi","Panvel",
+  "Satara","Beed","Yavatmal","Kamptee","Gondiya","Barshi","Wardha","Osmanabad",
+  "Washim","Hingoli","Ratnagiri","Sindhudurg","Gadchiroli","Bhandara","Buldhana",
+  "Nandurbar","Palghar","Raigad",
+
+  // Manipur
+  "Imphal","Thoubal","Bishnupur Manipur","Churachandpur","Kakching","Senapati",
+  "Ukhrul","Tamenglong","Chandel","Jiribam","Kangpokpi","Noney","Pherzawl","Tengnoupal",
+  "Kamjong","Moirang",
+
+  // Meghalaya
+  "Shillong","Tura","Nongstoin","Jowai","Baghmara","Williamnagar","Nongpoh",
+  "Resubelpara","Ampati","Mairang","Mawkyrwat","Khliehriat",
+
+  // Mizoram
+  "Aizawl","Lunglei","Champhai","Serchhip","Kolasib","Lawngtlai","Saiha","Mamit",
+  "Hnahthial","Khawzawl","Saitual",
+
+  // Nagaland
+  "Kohima","Dimapur","Mokokchung","Tuensang","Wokha","Zunheboto","Mon","Phek",
+  "Longleng","Kiphire","Peren","Noklak","Tseminyu","Chumukedima",
+
+  // Odisha
+  "Bhubaneswar","Cuttack","Rourkela","Brahmapur","Sambalpur","Puri","Balasore",
+  "Baripada","Bhadrak","Jharsuguda","Jeypore","Barbil","Koraput","Paradip","Rayagada",
+  "Angul","Dhenkanal","Kendrapara","Jajpur","Jagatsinghpur","Bargarh","Phulbani",
+  "Bhawanipatna","Sundargarh","Keonjhar","Bolangir","Nuapada","Sonepur","Nayagarh",
+  "Ganjam","Nabarangpur","Malkangiri","Boudh","Deogarh Odisha","Gajapati",
+  "Kendujhar","Mayurbhanj",
+
+  // Punjab
+  "Ludhiana","Amritsar","Jalandhar","Patiala","Bathinda","Mohali","Pathankot",
+  "Hoshiarpur","Batala","Moga","Abohar","Malerkotla","Khanna","Phagwara","Muktsar",
+  "Barnala","Rajpura","Firozpur","Kapurthala","Faridkot","Sangrur","Fazilka",
+  "Gurdaspur","Tarn Taran","Mansa Punjab","Rupnagar","Nawanshahr",
+
+  // Rajasthan
+  "Jaipur","Jodhpur","Kota","Bikaner","Ajmer","Udaipur","Bhilwara","Alwar",
+  "Bharatpur","Sikar","Pali","Sri Ganganagar","Kishangarh","Beawar","Hanumangarh",
+  "Dhaulpur","Gangapur City","Sawai Madhopur","Churu","Jhunjhunu","Tonk","Nagaur",
+  "Baran","Bundi","Rajsamand","Dungarpur","Banswara","Chittorgarh","Sirohi",
+  "Pratapgarh Rajasthan","Jhalawar","Karauli","Barmer","Jaisalmer","Jalore",
+
+  // Sikkim
+  "Gangtok","Namchi","Gyalshing","Mangan","Ravangla","Singtam","Rangpo","Jorethang",
+  "Pakyong","Soreng",
+
+  // Tamil Nadu
+  "Chennai","Coimbatore","Madurai","Tiruchirappalli","Salem","Tirunelveli","Tiruppur",
+  "Erode","Vellore","Thoothukkudi","Dindigul","Thanjavur","Ranipet","Sivakasi",
+  "Karur","Udhagamandalam","Hosur","Nagercoil","Kanchipuram","Kumbakonam",
+  "Rajapalayam","Pudukkottai","Cuddalore","Ambur","Vaniyambadi","Tiruvannamalai",
+  "Pollachi","Nagapattinam","Villupuram","Dharmapuri","Namakkal","Perambalur",
+  "Krishnagiri","Ariyalur","Ramanathapuram","Sivaganga","Tenkasi","Tirupattur",
+  "Chengalpattu","Kallakurichi","Mayiladuthurai","Nilgiris","Virudhunagar","Theni",
+  "Karaikudi","Arakkonam",
+
+  // Telangana
+  "Hyderabad","Warangal","Nizamabad","Karimnagar","Khammam","Ramagundam",
+  "Mahbubnagar","Nalgonda","Adilabad","Suryapet","Miryalaguda","Siddipet",
+  "Mancherial","Jagtial","Nirmal","Kamareddy","Kothagudem","Bodhan","Sangareddy",
+  "Wanaparthy","Medak","Nagarkurnool","Vikarabad","Bhongir","Jangaon","Peddapalli",
+  "Gadwal","Zahirabad","Tandur","Narayanpet","Mulugu","Jayashankar Bhupalpally",
+  "Rajanna Sircilla","Medchal","Mahabubabad",
+
+  // Tripura
+  "Agartala","Dharmanagar","Udaipur Tripura","Kailasahar","Belonia","Khowai",
+  "Ambassa","Kamalpur","Sabroom","Melaghar","Amarpur","Bishramganj","Teliamura",
+  "Kumarghat","Sonamura",
+
+  // Uttar Pradesh
+  "Lucknow","Kanpur","Ghaziabad","Agra","Meerut","Varanasi","Prayagraj","Bareilly",
+  "Aligarh","Moradabad","Saharanpur","Gorakhpur","Noida","Firozabad","Jhansi",
+  "Muzaffarnagar","Mathura","Rampur","Shahjahanpur","Farrukhabad","Mau","Hapur",
+  "Etawah","Mirzapur","Bulandshahr","Sambhal","Amroha","Hardoi","Fatehpur",
+  "Raebareli","Orai","Sitapur","Bahraich","Modinagar","Unnao","Lakhimpur Kheri",
+  "Jaunpur","Banda","Sultanpur","Ayodhya","Azamgarh","Basti","Deoria","Gonda",
+  "Ballia","Pratapgarh UP","Chandausi","Lalitpur","Etah","Hathras","Mainpuri",
+  "Kasganj","Pilibhit","Bijnor","Budaun","Baghpat","Shamli","Auraiya","Amethi",
+  "Chitrakoot","Sonbhadra","Balrampur UP","Shravasti","Hamirpur UP","Kannauj",
+  "Kushinagar","Maharajganj","Siddharthnagar","Sant Kabir Nagar","Ambedkar Nagar",
+
+  // Uttarakhand
+  "Dehradun","Haridwar","Haldwani","Roorkee","Kashipur","Rudrapur","Rishikesh",
+  "Kotdwar","Ramnagar","Pithoragarh","Almora","Mussoorie","Nainital","Pauri",
+  "Tehri","Chamoli","Uttarkashi","Bageshwar","Champawat","Rudraprayag","Srinagar UK",
+  "Jaspur","Sitarganj","Tanakpur","Manglaur",
+
+  // West Bengal
+  "Kolkata","Howrah","Durgapur","Asansol","Siliguri","Bardhaman","Malda","Baharampur",
+  "Habra","Kharagpur","Shantipur","Dankuni","Dhulian","Ranaghat","Haldia","Raiganj",
+  "Krishnanagar","Nabadwip","Medinipur","Jalpaiguri","Balurghat","Basirhat","Bankura",
+  "Cooch Behar","Darjeeling","Purulia","Contai","English Bazar","Alipurduar",
+  "Jangipur","Diamond Harbour","Katwa","Bolpur","Tamluk","Jhargram","Kalimpong",
+  "Suri","Birbhum","North 24 Parganas","South 24 Parganas","Hooghly","Nadia",
+  "Murshidabad","Uttar Dinajpur","Dakshin Dinajpur","Paschim Bardhaman",
+
+  // Union Territories
+  "Chandigarh",
+  // Delhi
+  "New Delhi","Central Delhi","East Delhi","North Delhi","North East Delhi",
+  "North West Delhi","Shahdara","South Delhi","South East Delhi","South West Delhi",
+  "West Delhi","Dwarka","Rohini","Janakpuri","Laxmi Nagar","Karol Bagh","Saket",
+  // Jammu & Kashmir
+  "Srinagar","Jammu","Anantnag","Baramulla","Sopore","Kathua","Udhampur","Rajouri",
+  "Poonch","Kupwara","Budgam","Pulwama","Shopian","Kulgam","Bandipora","Ganderbal",
+  "Kishtwar","Ramban","Reasi","Samba","Doda",
+  // Ladakh
+  "Leh","Kargil",
+  // Puducherry
+  "Puducherry","Karaikal","Mahe","Yanam",
+  // Andaman & Nicobar
+  "Port Blair","Car Nicobar","Mayabunder","Diglipur","Rangat","Havelock Island",
+  // Dadra & Nagar Haveli and Daman & Diu
+  "Daman","Diu","Silvassa",
+  // Lakshadweep
+  "Kavaratti","Agatti","Minicoy","Amini","Andrott","Kalpeni"
 ];
 
 export type AlertSeverity = "critical" | "warning" | "moderate" | "info";
@@ -110,12 +297,7 @@ export function getDailyQuiz(): QuizQuestion[] {
     {
       id: "q1",
       question: "What is the most effective way to prevent dengue?",
-      options: [
-        "Taking antibiotics",
-        "Eliminating stagnant water",
-        "Wearing warm clothes",
-        "Eating spicy food"
-      ],
+      options: ["Taking antibiotics", "Eliminating stagnant water", "Wearing warm clothes", "Eating spicy food"],
       correctAnswer: 1,
       explanation: "Dengue mosquitoes breed in stagnant water. Removing all standing water sources is the most effective prevention.",
       points: 10
@@ -131,12 +313,7 @@ export function getDailyQuiz(): QuizQuestion[] {
     {
       id: "q3",
       question: "During a heat wave, you should:",
-      options: [
-        "Exercise outdoors at noon",
-        "Drink caffeinated beverages",
-        "Stay hydrated with ORS and water",
-        "Wear dark, tight clothing"
-      ],
+      options: ["Exercise outdoors at noon", "Drink caffeinated beverages", "Stay hydrated with ORS and water", "Wear dark, tight clothing"],
       correctAnswer: 2,
       explanation: "Staying hydrated with ORS and water is crucial during heat waves to prevent heat stroke and dehydration.",
       points: 10
