@@ -176,14 +176,135 @@ export const indianCities = [
   "Tehri","Chamoli","Uttarkashi","Bageshwar","Champawat","Rudraprayag","Srinagar UK",
   "Jaspur","Sitarganj","Tanakpur","Manglaur",
 
-  // West Bengal
-  "Kolkata","Howrah","Durgapur","Asansol","Siliguri","Bardhaman","Malda","Baharampur",
-  "Habra","Kharagpur","Shantipur","Dankuni","Dhulian","Ranaghat","Haldia","Raiganj",
-  "Krishnanagar","Nabadwip","Medinipur","Jalpaiguri","Balurghat","Basirhat","Bankura",
-  "Cooch Behar","Darjeeling","Purulia","Contai","English Bazar","Alipurduar",
-  "Jangipur","Diamond Harbour","Katwa","Bolpur","Tamluk","Jhargram","Kalimpong",
-  "Suri","Birbhum","North 24 Parganas","South 24 Parganas","Hooghly","Nadia",
-  "Murshidabad","Uttar Dinajpur","Dakshin Dinajpur","Paschim Bardhaman",
+  // West Bengal — District-wise cities, towns & villages
+
+  // Kolkata
+  "Kolkata","Salt Lake City","New Town Kolkata","Behala","Tollygunge","Jadavpur",
+  "Ballygunge","Alipore","Garden Reach","Metiabruz","Rajabazar","Shyambazar",
+  "Bagbazar","Kumartuli","Jorasanko","Bowbazar","Entally","Tangra","Taltala",
+  "Park Street Area","Bhowanipore","Gariahat","Kasba Kolkata","Santoshpur",
+  "Garia","Narendrapur","Sonarpur","Baruipur","Joka","Thakurpukur","Haridevpur",
+
+  // Howrah District
+  "Howrah","Shibpur","Bally","Liluah","Belur","Domjur","Sankrail","Panchla",
+  "Uluberia","Bagnan","Amta","Udaynarayanpur","Jagatballavpur","Shyampur Howrah",
+  "Makardaha","Andul","Mourigram","Rajpur Howrah","Munshirhat",
+
+  // Hooghly District
+  "Chinsurah","Chandannagar","Serampore","Rishra","Uttarpara","Konnagar",
+  "Bhadreswar","Champdani","Singur","Haripal","Pursurah","Dhaniakhali",
+  "Tarakeswar","Goghat","Arambagh","Pandua Hooghly","Polba","Dadpur",
+  "Dankuni","Jangipara","Balagarh","Bansberia","Tribeni","Mogra",
+
+  // North 24 Parganas District
+  "Barasat","Barrackpore","Dum Dum","Madhyamgram","New Barrackpore","Titagarh",
+  "Khardaha","Panihati","Kamarhati","Agarpara","Garulia","Habra","Basirhat",
+  "Baduria","Hasnabad","Hingalganj","Sandeshkhali","Haroa","Rajarhat","Deganga",
+  "Amdanga","Gobardanga","Swarupnagar","Bagdah","Bongaon","Petrapole",
+  "Barasat II","Minakhan","Ashoknagar Kalyangarh","Bijpur","Naihati","Halisahar",
+  "Kanchrapara","Kalyani","Gayeshpur","Chakdaha North","Budge Budge II",
+
+  // South 24 Parganas District
+  "Diamond Harbour","Kakdwip","Sagar Island","Namkhana","Patharpratima",
+  "Kultali","Gosaba","Basanti","Canning","Joynagar","Baruipur","Sonarpur South",
+  "Rajpur Sonarpur","Maheshtala","Budge Budge","Falta","Mathurapur",
+  "Jaynagar Majilpur","Raidighi","Mandirbazar","Bishnupur South 24 Parganas",
+  "Lakshmikantapur","Usthi","Kulpi","Magrahat","Bhangar","Minakhan South",
+  "Thakurpukur Maheshtala","Metiabruz South","Subhasgram","Dakshin Barasat",
+  "Sundarban","Fraser Island","Jharkhali","Hingalganj South","Sandeshkhali South",
+
+  // Purba Bardhaman District
+  "Bardhaman","Memari","Kalna","Katwa","Monteswar","Purbasthali","Ketugram",
+  "Mangalkot","Raina","Jamalpur Bardhaman","Galsi","Bhatar","Ausgram",
+  "Burdwan Town","Nadanghat","Palsit","Madhabdihi",
+
+  // Paschim Bardhaman District
+  "Asansol","Durgapur","Kulti","Raniganj","Jamuria","Barabani","Salanpur",
+  "Andal","Faridpur Bardhaman","Kanksa","Pandabeswar","Ondal","Ukhra",
+  "Mejia","Neturia","Hirapur","Sitarampur","Dishergarh","Chittaranjan",
+
+  // Nadia District
+  "Krishnanagar","Nabadwip","Ranaghat","Shantipur","Kalyani","Gayeshpur",
+  "Chakdaha","Tehatta","Karimpur","Chapra Nadia","Haringhata","Hanskhali",
+  "Nakashipara","Krishnaganj","Bethuadahari","Dhantala","Majhdia","Santipur",
+  "Plassey","Debagram","Dhubulia","Phulia","Taherpur",
+
+  // Murshidabad District
+  "Baharampur","Jangipur","Dhulian","Lalbag","Jiaganj","Azimganj","Kandi",
+  "Khargram","Burwan","Sagardighi","Rejinagar","Beldanga","Hariharpara",
+  "Domkal","Raghunathganj","Suti","Nabagram","Bharatpur Murshidabad",
+  "Farakka","Samserganj","Daulatabad Murshidabad","Islampore","Murshidabad Town",
+  "Plassey Murshidabad","Bhagwangola","Raninagar","Jalangi","Nowda",
+
+  // Birbhum District
+  "Suri","Bolpur","Rampurhat","Nalhati","Sainthia","Dubrajpur","Labhpur",
+  "Nanoor","Md Bazar","Rajnagar","Illambazar","Murarai","Mayureswar",
+  "Ahmadpur","Khoyrasol","Parui","Kirnahar","Margram","Shantiniketan",
+  "Prantik","Tarapith","Bakreswar","Hetampur","Mallarpur",
+
+  // Bankura District
+  "Bankura","Bishnupur Bankura","Sonamukhi","Onda","Patrasayer","Indpur",
+  "Kotulpur","Jaypur Bankura","Mejhia","Gangajalghati","Barjora","Saltora",
+  "Chhatna","Taldangra","Simlapal","Khatra","Hirbandh","Ranibandh",
+  "Raipur Bankura","Indas","Sarenga",
+
+  // Purulia District
+  "Purulia","Raghunathpur","Adra","Jhalda","Arsha","Baghmundi","Balarampur Purulia",
+  "Hura","Kashipur Purulia","Manbazar","Neturia Purulia","Para","Puncha",
+  "Santuri","Bundwan","Joypur Purulia","Purulia II","Ajodhya Hills",
+
+  // Paschim Medinipur District
+  "Medinipur","Kharagpur","Ghatal","Keshpur","Narayangarh","Debra","Pingla",
+  "Sabang","Dantan","Mohanpur Medinipur","Chandrakona","Garbeta","Salboni",
+  "Binpur","Gopiballavpur","Nayagram","Belda","Keshiari","Midnapore Town",
+
+  // Purba Medinipur District
+  "Tamluk","Contai","Haldia","Panskura","Egra","Nandigram","Mahishadal",
+  "Sutahata","Chandipur Medinipur","Potashpur","Ramnagar Medinipur","Bhagwanpur",
+  "Deshapran","Khejuri","Moyna","Kolaghat","Nandakumar","Shahid Matangini",
+
+  // Jhargram District
+  "Jhargram","Gopiballavpur II","Sankrail Jhargram","Jamboni","Nayagram Jhargram",
+  "Binpur II","Lalgarh","Belpahari","Midnapore Jhargram",
+
+  // Malda District
+  "English Bazar","Malda","Old Malda","Gazole","Habibpur","Bamongola",
+  "Chanchal","Ratua","Harishchandrapur","Manikchak","Kaliachak","Mothabari",
+
+  // Uttar Dinajpur District
+  "Raiganj","Islampur Dinajpur","Dalkhola","Karandighi","Hemtabad","Kaliaganj",
+  "Itahar","Chopra","Goalpokhar","Chakulia Dinajpur",
+
+  // Dakshin Dinajpur District
+  "Balurghat","Gangarampur","Buniadpur","Tapan","Kumarganj","Hili",
+  "Kushmandi","Bansihari","Harirampur Dinajpur",
+
+  // Jalpaiguri District
+  "Jalpaiguri","Mainaguri","Dhupguri","Malbazar","Nagrakata","Rajganj Jalpaiguri",
+  "Maynaguri","Matiali","Banarhat","Kranti","Moynaguri",
+
+  // Alipurduar District
+  "Alipurduar","Falakata","Madarihat","Birpara","Kalchini","Kumargram",
+  "Jaigaon","Samuktala","Alipurduar Junction",
+
+  // Cooch Behar District
+  "Cooch Behar","Dinhata","Tufanganj","Mathabhanga","Mekhliganj","Sitai",
+  "Haldibari","Sitalkuchi","Cooch Behar Town","Ghoksadanga","Chilakhana",
+
+  // Darjeeling District
+  "Darjeeling","Kurseong","Mirik","Siliguri","Sukna","Bagdogra","Naxalbari",
+  "Kharibari","Phansidewa","Matigara","Mohitnagar","Dabgram","Pradhan Nagar",
+  "Sukhiapokhri","Jorebunglow","Ghoom","Sonada","Batasia","Tiger Hill",
+  "Rangbull","Lebong","Jalapahar",
+
+  // Kalimpong District
+  "Kalimpong","Pedong","Algara","Gorubathan","Lava Kalimpong","Lolay",
+  "Algarah","Rishibazar","Relli",
+
+  // Siliguri & Surrounding
+  "Siliguri","New Jalpaiguri","Sevoke","Salugara","Dagapur","Champasari",
+  "Kawakhali","Sukanta Nagar","Bhaktinagar","Matigara Siliguri",
+
 
   // Union Territories
   "Chandigarh",
