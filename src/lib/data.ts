@@ -234,61 +234,91 @@ export interface QuizQuestion {
 
 export function getAlertsForCity(city: string): HealthAlert[] {
   const hash = city.split('').reduce((a, c) => a + c.charCodeAt(0), 0);
+
+  const localityPool = [
+    "Old Town", "Station Road", "Market Area", "Civil Lines", "Gandhi Nagar",
+    "Nehru Colony", "Industrial Area", "University Road", "Bus Stand Area",
+    "Railway Colony", "Lakeside Colony", "River Bank Road", "Temple Street",
+    "Hospital Road", "Bypass Road", "MG Road", "Mall Road", "Cantonment",
+    "Sadar Bazaar", "Subhash Nagar", "Shivaji Nagar", "Ambedkar Nagar",
+    "Rajiv Gandhi Colony", "Patel Nagar", "Lal Bagh", "Ram Nagar",
+    "Azad Nagar", "Vikas Nagar", "Sector 5", "Sector 12", "Ward 7",
+    "Ward 14", "Zone A", "Zone C", "East Wing", "West Block"
+  ];
+
+  const pick = (seed: number, count: number) => {
+    const result: string[] = [];
+    for (let i = 0; i < count; i++) {
+      result.push(localityPool[(seed + i * 7) % localityPool.length]);
+    }
+    return result;
+  };
+
   const alerts: HealthAlert[] = [
     {
       id: "1",
       title: `Dengue Outbreak Alert`,
-      description: `${Math.floor(hash % 50 + 20)} new dengue cases reported in ${city} in the last 7 days. Stagnant water breeding sites identified in multiple wards.`,
+      description: `${Math.floor(hash % 50 + 20)} new dengue cases reported in ${city}. Stagnant water breeding sites identified near ${pick(hash, 2).join(" & ")}. Door-to-door fumigation underway in affected localities.`,
       severity: hash % 3 === 0 ? "critical" : "warning",
       category: "Disease Outbreak",
       icon: "bug",
       timestamp: "2 hours ago",
       affected: `${Math.floor(hash % 5 + 3)} wards`,
-      source: "Municipal Health Dept."
+      source: "Municipal Health Dept.",
+      localities: pick(hash, 4),
+      hotspots: [`${pick(hash, 1)[0]} — ${Math.floor(hash % 15 + 8)} cases`, `${pick(hash + 3, 1)[0]} — ${Math.floor(hash % 10 + 5)} cases`, `${pick(hash + 6, 1)[0]} — ${Math.floor(hash % 7 + 3)} cases`]
     },
     {
       id: "2",
       title: `Air Quality Index: ${hash % 200 + 100}`,
-      description: `AQI in ${city} is currently at ${hash % 200 + 100} (${hash % 200 + 100 > 200 ? 'Poor' : 'Moderate'}). PM2.5 levels elevated due to construction and vehicular emissions.`,
+      description: `AQI at ${pick(hash + 1, 1)[0]} monitoring station reads ${hash % 200 + 100} (${hash % 200 + 100 > 200 ? 'Poor' : 'Moderate'}). PM2.5 elevated near ${pick(hash + 2, 2).join(" and ")} due to construction and traffic.`,
       severity: hash % 200 + 100 > 200 ? "critical" : "moderate",
       category: "Air Quality",
       icon: "wind",
       timestamp: "Live",
-      affected: "Entire city",
-      source: "CPCB India"
+      affected: `${pick(hash + 1, 3).join(", ")}`,
+      source: "CPCB India",
+      localities: pick(hash + 1, 3),
+      hotspots: [`${pick(hash + 1, 1)[0]} — AQI ${hash % 200 + 130}`, `${pick(hash + 4, 1)[0]} — AQI ${hash % 200 + 110}`, `${pick(hash + 7, 1)[0]} — AQI ${hash % 200 + 90}`]
     },
     {
       id: "3",
       title: `Water Contamination Warning`,
-      description: `Elevated coliform levels detected in water supply for zones 3-7 of ${city}. Boil water advisory in effect.`,
+      description: `Elevated coliform levels detected in water supply serving ${pick(hash + 5, 3).join(", ")} areas of ${city}. Boil water advisory in effect for these localities.`,
       severity: "warning",
       category: "Water Safety",
       icon: "droplets",
       timestamp: "5 hours ago",
-      affected: "Zones 3-7",
-      source: "Water Authority"
+      affected: `${pick(hash + 5, 3).join(", ")}`,
+      source: "Water Authority",
+      localities: pick(hash + 5, 3),
+      hotspots: [`${pick(hash + 5, 1)[0]} — High coliform`, `${pick(hash + 8, 1)[0]} — Turbid supply`, `${pick(hash + 11, 1)[0]} — Low chlorine`]
     },
     {
       id: "4",
       title: `Heat Wave Advisory`,
-      description: `Temperatures in ${city} expected to reach ${hash % 8 + 40}°C. Vulnerable populations urged to stay indoors between 11 AM - 4 PM.`,
+      description: `Temperatures in ${city} expected to reach ${hash % 8 + 40}°C. Heat shelters set up at ${pick(hash + 9, 2).join(" and ")}. Vulnerable populations in ${pick(hash + 10, 1)[0]} urged to stay indoors 11 AM–4 PM.`,
       severity: "warning",
       category: "Weather",
       icon: "thermometer",
       timestamp: "Today",
       affected: "All areas",
-      source: "IMD"
+      source: "IMD",
+      localities: pick(hash + 9, 3),
+      hotspots: [`${pick(hash + 9, 1)[0]} — ${hash % 8 + 41}°C`, `${pick(hash + 12, 1)[0]} — ${hash % 8 + 40}°C`]
     },
     {
       id: "5",
       title: `COVID-19 Update`,
-      description: `${Math.floor(hash % 30 + 5)} new cases in ${city}. Vaccination drive ongoing at ${Math.floor(hash % 10 + 5)} centers.`,
+      description: `${Math.floor(hash % 30 + 5)} new cases in ${city}, concentrated in ${pick(hash + 13, 2).join(" and ")}. Vaccination drive at ${pick(hash + 15, 2).join(", ")} centers.`,
       severity: "info",
       category: "Pandemic",
       icon: "shield",
       timestamp: "Today",
-      affected: "All areas",
-      source: "Health Ministry"
+      affected: `${pick(hash + 13, 2).join(", ")}`,
+      source: "Health Ministry",
+      localities: pick(hash + 13, 3),
+      hotspots: [`${pick(hash + 13, 1)[0]} — ${Math.floor(hash % 12 + 3)} cases`, `${pick(hash + 16, 1)[0]} — ${Math.floor(hash % 8 + 2)} cases`]
     }
   ];
   return alerts;
