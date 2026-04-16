@@ -219,6 +219,8 @@ export interface HealthAlert {
   timestamp: string;
   affected: string;
   source: string;
+  localities: string[];
+  hotspots: string[];
 }
 
 export interface QuizQuestion {
