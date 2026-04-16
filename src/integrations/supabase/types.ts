@@ -14,7 +14,102 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          display_name: string | null
+          id: string
+          selected_city: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          selected_city?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          selected_city?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      quiz_scores: {
+        Row: {
+          created_at: string
+          id: string
+          points_earned: number
+          quiz_date: string
+          score: number
+          total_questions: number
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          points_earned?: number
+          quiz_date?: string
+          score?: number
+          total_questions?: number
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          points_earned?: number
+          quiz_date?: string
+          score?: number
+          total_questions?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
+      reported_issues: {
+        Row: {
+          category: string | null
+          city: string
+          created_at: string
+          description: string | null
+          id: string
+          locality: string | null
+          severity: string
+          title: string
+          user_id: string
+        }
+        Insert: {
+          category?: string | null
+          city: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          locality?: string | null
+          severity?: string
+          title: string
+          user_id: string
+        }
+        Update: {
+          category?: string | null
+          city?: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          locality?: string | null
+          severity?: string
+          title?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

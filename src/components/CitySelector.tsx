@@ -1,14 +1,16 @@
 import { useState, useMemo } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { MapPin, Search, Shield, Activity, ChevronRight } from "lucide-react";
+import { MapPin, Search, Shield, Activity, ChevronRight, LogOut } from "lucide-react";
 import { indianCities } from "@/lib/data";
 
 interface CitySelectorProps {
   onSelectCity: (city: string) => void;
+  userName?: string;
+  onSignOut?: () => void;
 }
 
-export function CitySelector({ onSelectCity }: CitySelectorProps) {
+export function CitySelector({ onSelectCity, userName, onSignOut }: CitySelectorProps) {
   const [query, setQuery] = useState("");
 
   const filtered = useMemo(() => {
@@ -22,6 +24,18 @@ export function CitySelector({ onSelectCity }: CitySelectorProps) {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 py-12 gradient-hero relative overflow-hidden">
+      {/* User bar */}
+      {userName && (
+        <div className="absolute top-4 right-4 z-20 flex items-center gap-2">
+          <span className="text-primary-foreground/80 text-sm font-medium">Hi, {userName}!</span>
+          {onSignOut && (
+            <Button variant="ghost" size="sm" onClick={onSignOut} className="text-primary-foreground/70 hover:bg-background/10 h-8 px-2">
+              <LogOut className="h-4 w-4" />
+            </Button>
+          )}
+        </div>
+      )}
+
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-background/5 blur-3xl animate-float" />

@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { CitySelector } from "@/components/CitySelector";
 import { Dashboard } from "@/components/Dashboard";
+import { AuthPage } from "@/components/AuthPage";
+import { useAuth } from "@/hooks/useAuth";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -16,11 +18,39 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const { user, profile, loading, displayName, signUp, signIn, signOut, updateCity } = useAuth();
   const [city, setCity] = useState<string | null>(null);
 
-  if (city) {
-    return <Dashboard city={city} onBack={() => setCity(null)} />;
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center gradient-hero">
+        <div className="text-primary-foreground text-lg animate-pulse">Loading SafeHub...</div>
+      </div>
+    );
   }
 
-  return <CitySelector onSelectCity={setCity} />;
+  if (!user) {
+    return (
+      <AuthPage
+        onAuth={async (action, email, password, name) => {
+          if (action === "signup") {
+            await signUp(email, password, name || "");
+          } else {
+            await signIn(email, password);
+          }
+        }}
+      />
+    );
+  }
+
+  const handleSelectCity = (c: string) => {
+    setCity(c);
+    updateCity(c);
+  };
+
+  if (city) {
+    return <Dashboard city={city} onBack={() => setCity(null)} userName={displayName} onSignOut={signOut} />;
+  }
+
+  return <CitySelector onSelectCity={handleSelectCity} userName={displayName} onSignOut={signOut} />;
 }
