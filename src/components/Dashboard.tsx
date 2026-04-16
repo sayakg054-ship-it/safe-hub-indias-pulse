@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   MapPin, ArrowLeft, Bell, Activity, Brain, Bot, Trophy,
-  Thermometer, Wind, Droplets
+  Thermometer, Wind, Droplets, LogOut, User
 } from "lucide-react";
 import { getAlertsForCity } from "@/lib/data";
 import { AlertCard } from "@/components/AlertCard";
@@ -14,6 +14,8 @@ import { ChatBot } from "@/components/ChatBot";
 interface DashboardProps {
   city: string;
   onBack: () => void;
+  userName?: string;
+  onSignOut?: () => void;
 }
 
 export function Dashboard({ city, onBack }: DashboardProps) {

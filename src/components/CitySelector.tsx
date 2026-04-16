@@ -6,6 +6,8 @@ import { indianCities } from "@/lib/data";
 
 interface CitySelectorProps {
   onSelectCity: (city: string) => void;
+  userName?: string;
+  onSignOut?: () => void;
 }
 
 export function CitySelector({ onSelectCity }: CitySelectorProps) {
