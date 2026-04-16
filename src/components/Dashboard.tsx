@@ -18,7 +18,7 @@ interface DashboardProps {
   onSignOut?: () => void;
 }
 
-export function Dashboard({ city, onBack }: DashboardProps) {
+export function Dashboard({ city, onBack, userName, onSignOut }: DashboardProps) {
   const alerts = getAlertsForCity(city);
   const hash = city.split('').reduce((a, c) => a + c.charCodeAt(0), 0);
   const aqi = hash % 200 + 100;

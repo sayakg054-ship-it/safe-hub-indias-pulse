@@ -10,7 +10,7 @@ interface CitySelectorProps {
   onSignOut?: () => void;
 }
 
-export function CitySelector({ onSelectCity }: CitySelectorProps) {
+export function CitySelector({ onSelectCity, userName, onSignOut }: CitySelectorProps) {
   const [query, setQuery] = useState("");
 
   const filtered = useMemo(() => {
