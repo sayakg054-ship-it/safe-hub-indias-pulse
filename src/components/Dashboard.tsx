@@ -39,9 +39,19 @@ export function Dashboard({ city, onBack, userName, onSignOut }: DashboardProps)
             >
               <ArrowLeft className="h-4 w-4" /> Back
             </Button>
-            <Badge className="bg-background/15 text-primary-foreground border-0 backdrop-blur-sm gap-1">
-              <Bell className="h-3 w-3" /> {alerts.length} Alerts
-            </Badge>
+            <div className="flex items-center gap-2">
+              {userName && (
+                <span className="text-primary-foreground/80 text-sm font-medium">Hi, {userName}</span>
+              )}
+              {onSignOut && (
+                <Button variant="ghost" size="icon" onClick={onSignOut} className="text-primary-foreground/70 hover:bg-background/10 h-8 w-8">
+                  <LogOut className="h-4 w-4" />
+                </Button>
+              )}
+              <Badge className="bg-background/15 text-primary-foreground border-0 backdrop-blur-sm gap-1">
+                <Bell className="h-3 w-3" /> {alerts.length} Alerts
+              </Badge>
+            </div>
           </div>
           <div className="flex items-center gap-2 mb-4">
             <MapPin className="h-5 w-5 text-primary-foreground/80" />
