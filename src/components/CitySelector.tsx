@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { MapPin, Search, Shield, Activity, ChevronRight } from "lucide-react";
+import { MapPin, Search, Shield, Activity, ChevronRight, LogOut } from "lucide-react";
 import { indianCities } from "@/lib/data";
 
 interface CitySelectorProps {
