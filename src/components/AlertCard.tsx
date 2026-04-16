@@ -1,9 +1,10 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
   Bug, Wind, Droplets, Thermometer, Shield,
-  AlertTriangle, Flag, BookOpen, Zap
+  AlertTriangle, Flag, BookOpen, Zap, MapPin, ChevronDown, ChevronUp
 } from "lucide-react";
 import type { HealthAlert } from "@/lib/data";
 
@@ -31,6 +32,7 @@ const severityBadge: Record<string, { label: string; className: string }> = {
 
 export function AlertCard({ alert }: { alert: HealthAlert }) {
   const badge = severityBadge[alert.severity];
+  const [expanded, setExpanded] = useState(false);
 
   return (
     <Card className={`${severityStyles[alert.severity]} border-0 overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5`}>
@@ -46,7 +48,38 @@ export function AlertCard({ alert }: { alert: HealthAlert }) {
                 {badge.label}
               </Badge>
             </div>
-            <p className="text-xs text-muted-foreground mb-3 line-clamp-2">{alert.description}</p>
+            <p className="text-xs text-muted-foreground mb-2">{alert.description}</p>
+
+            {/* Affected localities */}
+            <div className="flex items-center gap-1.5 mb-2 flex-wrap">
+              <MapPin className="h-3 w-3 text-primary shrink-0" />
+              <span className="text-[10px] font-medium text-foreground/80">Affected areas:</span>
+              {alert.localities.map((loc) => (
+                <Badge key={loc} variant="outline" className="text-[9px] px-1.5 py-0 bg-background/40 border-foreground/15">
+                  {loc}
+                </Badge>
+              ))}
+            </div>
+
+            {/* Expandable hotspot details */}
+            <button
+              onClick={() => setExpanded(!expanded)}
+              className="flex items-center gap-1 text-[10px] font-medium text-primary hover:underline mb-2"
+            >
+              {expanded ? <ChevronUp className="h-3 w-3" /> : <ChevronDown className="h-3 w-3" />}
+              {expanded ? "Hide" : "View"} hotspot details
+            </button>
+            {expanded && (
+              <div className="bg-background/40 backdrop-blur-sm rounded-lg p-2.5 mb-2 space-y-1.5">
+                {alert.hotspots.map((spot) => (
+                  <div key={spot} className="flex items-center gap-2 text-[11px] text-foreground/80">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                    {spot}
+                  </div>
+                ))}
+              </div>
+            )}
+
             <div className="flex items-center gap-2 text-[10px] text-muted-foreground mb-3">
               <span>{alert.timestamp}</span>
               <span>•</span>
