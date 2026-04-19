@@ -23,9 +23,6 @@ export function AuthPage({ onAuth }: AuthPageProps) {
     setLoading(true);
     try {
       await onAuth(mode, email, password, name);
-      if (mode === "signup") {
-        setSuccess("Account created! Check your email to confirm, then sign in.");
-      }
     } catch (err: any) {
       setError(err.message || "Something went wrong");
     } finally {
